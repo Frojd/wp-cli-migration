@@ -13,7 +13,7 @@ Run the commands without args for full documentation.
 
 ## Configuration
 
-wp-cli-migration saves all migrations to ABSPATH by default. You may change this by adding the following to your wp-config.php
+wp-cli-migration saves all migrations to ABSPATH.'/migrations' by default. You may change this by adding the following to your wp-config.php
 ```php
 define('WP_CLI_MIGRATION_PATH', 'some_folder_path');
 ```
