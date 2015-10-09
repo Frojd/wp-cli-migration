@@ -62,7 +62,6 @@ class Create extends \WP_CLI_Command {
 
     private function createMigrationFile($fullPath, $fileName) {
         file_put_contents($fullPath, "#!/bin/bash\n\n", LOCK_EX);
-        file_put_contents($fullPath, 'echo "Running migration '.$fileName."\"\n\n", FILE_APPEND | LOCK_EX);
 
         chmod($fullPath, 0755);
     }
