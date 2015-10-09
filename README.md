@@ -17,3 +17,24 @@ wp-cli-migration saves all migrations to ABSPATH.'migrations/' by default. You m
 ```php
 define('WP_CLI_MIGRATION_PATH', 'some_folder_path');
 ```
+
+## Examples
+
+Lets say we want to activates some required plugins when a changeset is deployed.
+
+1. Create the migration:
+```bash
+wp migration-create new plugin-activation
+wp migration-create append "wp plugin activate advanced-custom-fields-pro"
+wp migration-create append "wp plugin activate w3-total-cache"
+```
+If you prefer you may also edit the migration file instead of using the append-command
+
+2. Test the migration localy
+
+Run the following on localhost to test the migration, it will only run once. If you need to run it again you could use the --force flag.
+```bash
+wp migration-run run-all
+```
+
+3. Add "wp migration-run run-all" command to your deploy-script
