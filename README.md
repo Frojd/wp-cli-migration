@@ -5,8 +5,8 @@ The purpouse of this is to be able to automate and version db-changes in a wordp
 
 ## Available commands
 ```
-wp migration create <args>
-wp migration run <args>
+wp migration-create <args>
+wp migration-run <args>
 ````
 
 Run the commands without args for full documentation.
